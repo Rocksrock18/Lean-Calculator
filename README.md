@@ -2,8 +2,8 @@
 API that takes formatted data about a utility pole and returns a number representing how much the pole is leaning.
 
 ## Additional Resources
-Repo for front-end:
-Repo for AirSim autopilot:
+- Repo for front-end:
+- Repo for AirSim autopilot:
 
 ## Calling the API
 You can make a POST request to: https://lean-calculator.herokuapp.com/api
@@ -37,7 +37,7 @@ Each factor is then *scaled* and combined to reach the final output.
 - Anything above 10 means the pole is heavily leaning.
 
 ## Authors
-Jasen Lai
-Jaewook Lee
-Arnold Makarov
-Jacob Maxson
+* Jasen Lai
+* Jaewook Lee
+* Arnold Makarov
+* Jacob Maxson

@@ -21,7 +21,7 @@ class LeanCalc():
         azimuth = data["azimuth"]
         heading = data["heading"]
         fov = data["fov"]
-        # from here on, calcs can be ambiguous; we must adjust the numbers to ensure it is within the view we want
+        # from here on, numbers can be ambiguous (360 is the same as 0, etc.); we must adjust the numbers to ensure it is within the view we want
         diff = self.adjustOffset(heading-azimuth, fov)
         correction = yaw-(diff+180+270) if bool(yaw > 270) != bool(heading > azimuth) else yaw-(diff+270) # centers at 270, may adjust across 180 line
         return self.adjustOffset(correction, fov)

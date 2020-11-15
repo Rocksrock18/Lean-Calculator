@@ -11,15 +11,16 @@ def api():
         #   form of the data:
         #   {   
         #       pole: {coordinates:[]}
-        #       image: {fov: , yaw: , width: , height: , latitude: , longitude: , type: , azimuth: , heading: , bounding_box: }     
+        #       image: {fov: , yaw: , width: , height: , latitude: , longitude: , type: , azimuth: , heading: }     
         #       esri_data: {assets: {pole: , crossarm: , insulator: }}
+        #       bounded_box: []
         #   }
         data = request.form.to_dict()
         image_data = json.loads(data["image"])
         lc = LeanCalc()
         offset = lc.calcOffsetFactor(image_data)
         distance = lc.calcDistance(json.loads(data["pole"])["coordinates"], image_data)
-        lean_factor = lc.calcLeanFactor(offset, image_data["bounding_box"], image_data["height"], image_data["width"], distance)
+        lean_factor = lc.calcLeanFactor(offset, json.loads(data["bounded_box"]), image_data["height"], image_data["width"], distance)
         return jsonify(lean_factor)
     else:
         return jsonify("Request type not allowed")

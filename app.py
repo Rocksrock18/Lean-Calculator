@@ -20,7 +20,7 @@ def api():
         lc = LeanCalc()
         offset = lc.calcOffsetFactor(image_data)
         distance = lc.calcDistance(json.loads(data["pole"])["coordinates"], image_data)
-        lean_factor = lc.calcLeanFactor(offset, data["bounded_box"], image_data["height"], image_data["width"], distance)
+        lean_factor = lc.calcLeanFactor(offset, json.loads(data["bounded_box"]), image_data["height"], image_data["width"], distance)
         return jsonify(lean_factor)
     else:
         return jsonify("Request type not allowed")

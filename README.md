@@ -2,7 +2,7 @@
 API that takes formatted data about a utility pole and returns a number representing how much the pole is leaning.
 
 ## Additional Resources
-- Repo for front-end:
+- Repo for front-end: https://github.com/arnoldmak12/FrontEnd-HazardousUtilityPoles
 - Repo for AirSim autopilot:
 
 ## Calling the API

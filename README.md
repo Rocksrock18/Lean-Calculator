@@ -13,8 +13,11 @@ The data you send to the API must be of the following form:
 `
 {   
   pole: {coordinates:[ , ]}
-  image: {fov: , yaw: , width: , height: , latitude: , longitude: , type: , azimuth: , heading: }     
+  
+  image: {fov: , yaw: , width: , height: , latitude: , longitude: , type: , azimuth: , heading: } 
+  
   esri_data: {assets: {pole: , crossarm: , insulator: }}
+  
   bounded_box: [ , , , ]
 }
 `

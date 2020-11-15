@@ -3,7 +3,6 @@ API that takes formatted data about a utility pole and returns a number represen
 
 ## Additional Resources
 - Repo for front-end: https://github.com/arnoldmak12/FrontEnd-HazardousUtilityPoles
-- Repo for AirSim autopilot:
 
 ## Calling the API
 You can make a POST request to: https://lean-calculator.herokuapp.com/api

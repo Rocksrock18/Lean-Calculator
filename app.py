@@ -4,6 +4,10 @@ import json
 
 app = Flask(__name__)
 
+@app.after_request
+def add_header(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 @app.route('/api', methods = ['GET', 'POST', 'DELETE'])
 def api():
